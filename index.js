@@ -61,7 +61,9 @@ $(function(){
         // });
     });
     $("#clear").click(function(){
-        $("#posts").empty();
+        $("#post_table_no").empty();
+        $("#post_menu").empty();
+        $("#post_staff").empty();
        
         });
     });
