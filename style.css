@@ -13,8 +13,6 @@ body{
   position: relative;
   padding: 5em 0em 7em 0em;
  
-  
-
   font-family: 'Oxygen', sans-serif;
   font-weight: bold;
   color: rgb(255, 255, 255);
@@ -63,9 +61,16 @@ h3{
   width: 1200px;
 }
 
-.footer {
-  font-family: 'Anton', sans-serif;
-  color: rgb(255, 255, 255);
+#center{
+  margin-bottom: center;
+  padding: 12px 28px;
+}
+
+#footer-wrapper {
+  background: #ffffff;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 0.875em;
 }
