@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-html, body
-{
-  height: 100%;
-}
-
-body
-{
+body{
   margin: 0px;
   padding: 0px;
   background: #111111;
@@ -48,9 +41,6 @@ h3{
   color: rgb(0, 0, 0);
 
 }
-
-
-
 
 #banner
 {
@@ -83,112 +73,8 @@ h3{
   align-items: center;
 }
 
-#btn{
+.btn{
   position: center;
+  margin: auto;
 }
 
-=======
-html, body
-{
-  height: 100%;
-}
-
-body
-{
-  margin: 0px;
-  padding: 0px;
-  background: #111111;
-  font-size: 12pt;
-  font-weight: 200;
-  color: #FFF;
-}
-
-#header-wrapper{
-  background-image: url("headercof.jpeg");
-  background-size: cover;
-  position: relative;
-  padding: 5em 0em 7em 0em;
- 
-  
-
-  font-family: 'Oxygen', sans-serif;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  font-size: 0.875em;
-  text-align: center;
-
-}
-
-h1{
-  font-family: 'Anton', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 70px;
-
-}
-
-h2{
-  font-family: 'Playfair Display', serif;
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-h3{
-  font-family: 'Playfair Display', serif;
-  color: rgb(0, 0, 0);
-
-}
-
-
-
-
-#banner
-{
-  padding-top: 10em;
-  text-align: center;
-}
-
-
-#wrapper
-{
-  position: relative;
-  padding: 5em 0em 7em 0em;
-  background: rgb(255, 255, 255);
-}
-.container
-{
-  overflow: hidden;
-  margin: 0em auto;
-  width: 1200px;
-}
-
-.footer {
-  font-family: 'Anton', sans-serif;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 0.875em;
-}
-
-.boxA,
-.boxB,
-.boxC
-{
-  width: 384px;
-}
-
-.boxA,
-.boxB
-{
-  float: left;
-  margin-right: 20px;
-}
-
-.boxC
-{
-  float: right;
-}
-
-#btn{
-  position: center;
-}
-
->>>>>>> 424a37a71af4958225af2048ac72d85911555116
