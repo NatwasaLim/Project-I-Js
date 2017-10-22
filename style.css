@@ -79,24 +79,8 @@ h3{
   font-size: 0.875em;
 }
 
-.boxA,
-.boxB,
-.boxC
-{
-  width: 384px;
-    
-}
-
-.boxA,
-.boxB
-{
-  float: left;
-  margin-right: 20px;
-}
-
-.boxC
-{
-  float: right;
+.col-md {
+  align-items: center;
 }
 
 #btn{
