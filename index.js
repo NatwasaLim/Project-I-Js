@@ -1,3 +1,32 @@
+function deletepost(id){
+    alert('delete ' + id);
+
+    //Delete from back end
+    $.ajax({
+        url: "http://localhost:3000/posts/" + id, // post id
+        type: "DELETE" // Use DELETE
+    })
+
+    //Delete from front end
+    $("#post"+id).empty();
+}
+
+function editpost(id) {
+    alert('edit ' + id);
+    $("#table" + id).prop('readonly', false);
+    $("#menu" + id).prop('readonly', false);
+    $("#staff" + id).prop('readonly', false);
+    $.ajax({
+        type: 'PUT',
+        //data: {name: 'Billy Bob', age: 28},
+        url: "http://localhost:3000/posts/",
+        success: function () {
+            //no data...just a success (200) status code
+            console.log('Friend Updated Successfully!');
+        }
+    });
+  }
+
 $(function () {
 
     $("#submit").click(function () {
@@ -36,23 +65,6 @@ $(function () {
 
     });
 
-
-
-    $("#clear").click(function () {
-        function deletepost(id){
-            alert('delete ' + id);
-          
-            //Delete from back end
-            $.ajax({
-                url: "http://localhost:3000/posts/" + id, // post id
-                type: "DELETE" // Use DELETE
-            })
-          
-            //Delete from front end
-            $("#post"+id).empty();
-          }
-
-    });
 
 
 });

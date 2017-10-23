@@ -18,11 +18,19 @@
   <link rel="stylesheet" href="style.css">
   <script src="index.js"></script>
   <script id="template" type="x-tmpl-mustache">
-
-    <h5>{{table}}
-      {{menu}}
-    {{staff}}</5>
-     <button ></button> 
+ 
+ 
+    <div id="post{{id}}">
+    
+        <input type="text"class="title1" id="table{{id}}" value="{{table}}" readonly>
+        <input type="text"class="title1" id="menu{{id}}" value="{{menu}}" readonly>
+        <input type="text"class="title1" id="staff{{id}}" value="{{staff}}" readonly>
+    
+        <button id="remove" onclick='deletepost({{id}})'><i class="fa fa-trash" aria-hidden="true"></i>Remove {{id}}</button>
+        <button id="edit" onclick='editpost({{id}})'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit {{id}}</button>
+        <button id="save" onclick='savepost({{id}})'><i class="fa fa-floppy-o" aria-hidden="true"></i>Save {{id}}</button>
+  
+      </div>
   </script>
 
 </head>
@@ -80,10 +88,6 @@
         <div class="btn-group" role="group" aria-label="...">
           <button type="submit" class="btn btn-primary btn-md" id="submit">
             <i class="fa fa-plus-circle" aria-hidden="true"></i> Submit</button>
-          <button type="submit" class="btn btn-warning btn-md" id="">
-            <i class="fa fa-pencil-square" aria-hidden="true"></i> Edit</button>
-            <button type="submit" class="btn btn-danger btn-md" id="clear">
-                <i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
         </div>
       </div>
   </div>
