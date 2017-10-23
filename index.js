@@ -11,6 +11,7 @@ function deletepost(id){
     $("#post"+id).empty();
 }
 
+
 function editpost(id) {
     alert('edit ' + id);
     $("#table" + id).prop('readonly', false);
@@ -26,6 +27,21 @@ function editpost(id) {
         }
     });
   }
+
+  function savepost(id){  
+        $.ajax({
+            url: "http://localhost:3000/posts/",
+            type: 'PUT',
+            data: "#table",
+            data: "#menu",
+            data: "staff",
+            success: function(data) {
+              alert('Load was performed.');
+            }
+          });
+
+  }
+
 
 $(function () {
 
