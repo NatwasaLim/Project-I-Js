@@ -26,9 +26,9 @@
         <input type="text"class="title1" id="menu{{id}}" value="{{menu}}" readonly>
         <input type="text"class="title1" id="staff{{id}}" value="{{staff}}" readonly>
     
-        <button id="remove" onclick='deletepost({{id}})'><i class="fa fa-trash" aria-hidden="true"></i>Remove {{id}}</button>
-        <button id="edit" onclick='editpost({{id}})'><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit {{id}}</button>
-        <button id="save" onclick='savepost({{id}})'><i class="fa fa-floppy-o" aria-hidden="true"></i>Save {{id}}</button>
+       <button class="btn btn-danger btn-md" id="remove" onclick='deletepost({{id}})'><i class="fa fa-trash" aria-hidden="true"></i> Remove {{id}}</button> 
+        <button class="btn btn-warning btn-md" id="edit" onclick='editpost({{id}})'><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit {{id}}</button>
+        <button class="btn btn-success" id="save" onclick='savepost({{id}})'><i class="fa fa-floppy-o" aria-hidden="true"></i> Save {{id}}</button>
   
       </div>
   </script>
@@ -95,16 +95,10 @@
   </div>
 
   <div class="container">
-      <h5> Start Each Day With The Balck Coffee </h5>
-        
-      <div id="posts"></div>
-  
-    </div>
-      
-
-      </div>
-    </div>
+    <h5> Start Each Day With The Balck Coffee </h5>
+    <div id="posts"></div>
   </div>
-</body>
 
+
+  </body>
 </html>
