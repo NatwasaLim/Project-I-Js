@@ -5,6 +5,36 @@
       "table": "",
       "menu": "",
       "staff": ""
+    },
+    {
+      "id": 2,
+      "table": "1",
+      "menu": "icelatte",
+      "staff": "mind"
+    },
+    {
+      "id": 3,
+      "table": "2",
+      "menu": "hot tea",
+      "staff": "mind"
+    },
+    {
+      "id": 4,
+      "table": "4",
+      "menu": "smoothie",
+      "staff": "pim"
+    },
+    {
+      "id": 5,
+      "table": "5",
+      "menu": "mocha",
+      "staff": "linly"
+    },
+    {
+      "id": 6,
+      "table": "12",
+      "menu": "espresso",
+      "staff": "timmy"
     }
   ]
 }
