@@ -1,5 +1,5 @@
 function deletepost(id){
-    alert('delete ' + id);
+    alert('delete' + id);
 
     //Delete from back end
     $.ajax({
@@ -13,35 +13,58 @@ function deletepost(id){
 
 
 function editpost(id) {
-    alert('edit ' + id);
+    console.log(id);
+    var url = "http://localhost:3000/posts";
     $("#table" + id).prop('readonly', false);
     $("#menu" + id).prop('readonly', false);
     $("#staff" + id).prop('readonly', false);
+  
     $.ajax({
         type: 'PUT',
         //data: {name: 'Billy Bob', age: 28},
-        url: "http://localhost:3000/posts/",
+        url: url + "/" + id,
         success: function () {
             //no data...just a success (200) status code
-            console.log('Friend Updated Successfully!');
+            console.log(id);
         }
     });
   }
 
-  function savepost(id){  
-        $.ajax({
-            url: "http://localhost:3000/posts/",
-            type: 'PUT',
-            data: "#table",
-            data: "#menu",
-            data: "staff",
-            success: function(data) {
-              alert('Load was performed.');
-            }
-          });
 
-  }
+function savepost(id,table,menu,staff) {
+    // console.log(id,title)
+    var table = table;
+    var menu = menu;
+    var staff = staff;
 
+     //var title = title;
+ 
+     //console.log(text);
+     var newposts = {};
+     
+     newposts.id = id;
+     newposts.table = $("#ipTb"+id).val();
+     newposts.menu = $("#ipmenu"+id).val();
+     newposts.staff = $("#ipstaff"+id).val();
+     //newposts.title = text;
+     
+     //console.log(newposts);
+    // console.log(newposts.title);
+     //$("#title" + id).prop('readonly', true);
+     // console.log(newposts);
+     var url = "http://localhost:3000/posts/"+id;
+     // $("#title" + id).prop("");
+     $.ajax({
+         type: 'PUT',
+         data: newposts,
+         url: url,
+         success: function () {
+             //no data...just a success (200) status code
+             console.log(newposts);
+         }
+     });
+ } 
+ 
 
 $(function () {
 
