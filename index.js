@@ -37,23 +37,14 @@ function savepost(id,table,menu,staff) {
     var menu = menu;
     var staff = staff;
 
-     //var title = title;
- 
-     //console.log(text);
      var newposts = {};
      
      newposts.id = id;
-     newposts.table = $("#ipTb"+id).val();
-     newposts.menu = $("#ipmenu"+id).val();
-     newposts.staff = $("#ipstaff"+id).val();
-     //newposts.title = text;
-     
-     //console.log(newposts);
-    // console.log(newposts.title);
-     //$("#title" + id).prop('readonly', true);
-     // console.log(newposts);
+     newposts.table = $("#table"+id).val();
+     newposts.menu = $("#menu"+id).val();
+     newposts.staff = $("#staff"+id).val();
+    
      var url = "http://localhost:3000/posts/"+id;
-     // $("#title" + id).prop("");
      $.ajax({
          type: 'PUT',
          data: newposts,
@@ -86,13 +77,6 @@ $(function () {
 
 
         $.get(url, function (data) {
-           // $("#post_table_no").empty();
-           // $("#post_menu").empty();
-           // $("#post_staff").empty();
-           // $("#post_table_no").append(data[data.length - 1].table);
-           // $("#post_menu").append(data[data.length - 1].menu);
-           // $("#post_staff").append(data[data.length - 1].staff);
-
            console.log(data.length);  
            var template = $('#template').html();
            for(var i=data.length;i<=data.length;i++){
