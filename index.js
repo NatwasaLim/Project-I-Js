@@ -65,9 +65,9 @@ function savepost(id,table,menu,staff) {
      });
  } 
  
+ 
 
 $(function () {
-
     $("#submit").click(function () {
         // $("#posts").empty();
         var template = $('#template').html();
