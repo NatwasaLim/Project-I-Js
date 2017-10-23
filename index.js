@@ -1,83 +1,58 @@
-$(function(){
-    // $("#getdata").click(function(){
-    //     $("#posts").empty();
+$(function () {
 
-    //     var url = "http://localhost:3000/posts";
-    //     $.get(url, function(data){
-    //         console.log(data);  
-    //         var template = $('#template').html();
-    //         for(var i=0;i<data.length;i++){
-    //             var rendered = Mustache.render(template, data[i]);
-    //             $("#posts").append(rendered);
-    //         }
-    //     });
-    // });
-
-    $("#submit").click(function(){
+    $("#submit").click(function () {
         // $("#posts").empty();
-        console.log("test");
+        var template = $('#template').html();
         var newposts = {};
         newposts.id = null;
-        newposts.table = $("#exampleFormControlSelect1").val();
-        newposts.menu = $("#Inputmenu").val();
-        newposts.staff = $("#Inputstaff").val();
-        console.log("Table : " + newposts.table);
-        console.log("menu : " + newposts.menu);
-        console.log("staff : " + newposts.staff);
-        
+        newposts.table = $("#ipTb").val();
+        newposts.menu = $("#ipmenu").val();
+        newposts.staff = $("#ipstaff").val();
         var url = "http://localhost:3000/posts";
-        $.post(url, newposts, function(data, status){
+        $.post(url, newposts, function (data, status) {
             console.log("Inserted " + data);
-        });
-
-        $.get(url, function(data){
-            $("#post_table_no").empty();
-            $("#post_menu").empty();
-            $("#post_staff").empty();
-                $("#post_table_no").append(data[data.length-1].table);
-                $("#post_menu").append(data[data.length-1].menu);
-                $("#post_staff").append(data[data.length-1].staff);
-
+            $("#ipTb").val("");
+            $("#ipmenu").val("");
+            $("#ipstaff").val("");
         });
 
 
-        // $.post("http://localhost:3000/posts", newposts, function (data, status) {
-        //     console.log("Inserted " + data);
-        // });
+        $.get(url, function (data) {
+           // $("#post_table_no").empty();
+           // $("#post_menu").empty();
+           // $("#post_staff").empty();
+           // $("#post_table_no").append(data[data.length - 1].table);
+           // $("#post_menu").append(data[data.length - 1].menu);
+           // $("#post_staff").append(data[data.length - 1].staff);
 
-        // var template = $('#template').html();
-        // var mytext = $("#text").val();
-        // console.log("mytext : " + mytext);
-        // var rendered = Mustache.render(template, mytext);
-        // $("#posts").append(rendered);
-        // var url = "http://localhost:3000/posts";
-        // $.get(url, function(data){
-        //     console.log(data.length);  
-        //     var template = $('#template').html();
-        //     for(var i=data.length;i<=data.length;i++){
-        //         var rendered = Mustache.render(template, data[i-1]);
-        //         $("#posts").append(rendered);
-        //     }
-        // });
+           console.log(data.length);  
+           var template = $('#template').html();
+           for(var i=data.length;i<=data.length;i++){
+               var rendered = Mustache.render(template, data[i-1]);
+               $("#posts").append(rendered);
+           }
+
+        });
+
     });
-    $("#clear").click(function(){
-        $("#post_table_no").empty();
-        $("#post_menu").empty();
-        $("#post_staff").empty();
-       
-        });
-    });
-/*function deleteEmpty(clear){
-        for(var k in clear)
-         if(k == "children"){
-             if(obj[k]){
-                     deleteEmpty(obj[k]);
-             }else{
-                   delete clear.children;
-              } 
-         }
-    }
 
-    for(var i=0;i<data.length;i++){
-        deleteEmpty(a.children[i])
-}*/
+
+
+    $("#clear").click(function () {
+        function deletepost(id){
+            alert('delete ' + id);
+          
+            //Delete from back end
+            $.ajax({
+                url: "http://localhost:3000/posts/" + id, // post id
+                type: "DELETE" // Use DELETE
+            })
+          
+            //Delete from front end
+            $("#post"+id).empty();
+          }
+
+    });
+
+
+});
