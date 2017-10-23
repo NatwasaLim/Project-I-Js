@@ -103,3 +103,11 @@ h5{
   font-family: 'Oxygen', sans-serif;
 
 }
+
+.tbshow.btshow{
+  margin-bottom: center;
+  position: center;
+  margin: auto;
+  padding: 12px 28px;
+
+}

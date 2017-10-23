@@ -22,13 +22,24 @@
  
     <div id="post{{id}}">
     
-        <input type="text"class="title1" id="table{{id}}" value="{{table}}" readonly>
-        <input type="text"class="title1" id="menu{{id}}" value="{{menu}}" readonly>
-        <input type="text"class="title1" id="staff{{id}}" value="{{staff}}" readonly>
-    
-       <button class="btn btn-danger btn-md" id="remove" onclick='deletepost({{id}})'><i class="fa fa-trash" aria-hidden="true"></i> Remove {{id}}</button> 
+      <div class="tbshow">
+          <div class="row">
+              <div class="col-sm-4"><input type="text"class="title1" id="table{{id}}" value="{{table}}" readonly></div>
+              <div class="col-sm-4"><input type="text"class="title1" id="menu{{id}}" value="{{menu}}" readonly></div>
+              <div class="col-sm-4"><input type="text"class="title1" id="staff{{id}}" value="{{staff}}" readonly><br><br></div>
+            </div>
+      </div>
+
+    <div  class="container" >
+        <div class="row justify-content-md-center">
+          
+       <button class="btn btn-danger btn-md" id="remove" onclick='deletepost({{id}})'><i class="fa fa-trash" aria-hidden="true"></i> Remove {{id}}</button>
+
         <button class="btn btn-warning btn-md" id="edit" onclick='editpost({{id}})'><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit {{id}}</button>
+
         <button class="btn btn-success" id="save" onclick='savepost({{id}})'><i class="fa fa-floppy-o" aria-hidden="true"></i> Save {{id}}</button>
+        </div>
+    </div>
   
       </div>
   </script>
@@ -80,8 +91,8 @@
         </div>
       </div>
     </div>
-
   </div>
+
   <div id="center">
     <center>
       <div class="form-group">
@@ -90,8 +101,7 @@
             <i class="fa fa-plus-circle" aria-hidden="true"></i> Submit</button>
         </div>
       </div>
-  </div>
-  </center>
+    </center>
   </div>
 
   <div class="container">
@@ -100,5 +110,6 @@
   </div>
 
 
-  </body>
+</body>
+
 </html>
